@@ -8,12 +8,6 @@ const AddProduct = () => {
   const { admin } = useSelector(state => state.auth)
   const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   if (!user) {
-  //     navigate('/login-admin')
-  //   }
-  // }, [user])
-
   useEffect(() => {
     if (!admin) {
       navigate('/login-admin')
@@ -45,6 +39,12 @@ const AddProduct = () => {
       price: +productData.price,
     }
     dispatch(addProduct(data))
+    setProductData({
+    name: '',
+    price: '',
+    imageURL: '',
+    description: '',
+    })
   }
 
   return (
