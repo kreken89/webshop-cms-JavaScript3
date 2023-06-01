@@ -19,7 +19,7 @@ const AdminPanel = () => {
         <h2>Welcome to the Admin Panel</h2>
         {admin ? (
         <>
-        <h3>{admin.email}</h3>
+        <p>{admin.email}</p>
         </> 
         )
         :
