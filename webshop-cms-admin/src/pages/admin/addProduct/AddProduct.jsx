@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom'
 const AddProduct = () => {
   
   const { admin } = useSelector(state => state.auth)
+  // const [submitted, setSubmitted] = useState(false)
   const navigate = useNavigate()
+  
 
   useEffect(() => {
     if (!admin) {
@@ -44,7 +46,7 @@ const AddProduct = () => {
     price: '',
     imageURL: '',
     description: '',
-    })
+  })
   }
 
   return (

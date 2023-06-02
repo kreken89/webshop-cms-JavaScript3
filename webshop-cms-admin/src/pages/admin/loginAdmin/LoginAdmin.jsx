@@ -24,14 +24,32 @@ const LoginAdmin = () => {
   }
 
   const handleSubmit = async (e) => {
+    try {
+      
+  
     e.preventDefault()
-    await dispatch(loginAdminUser(formData))
+    const loginData = loginAdminUser(formData)
+    console.log('getstatate', JSON.stringify(loginData));
+    console.log('login', loginData);
+    
+    const response = await dispatch(loginData);
+    console.log('response promise', response);
+    if (response?.error?.message === 'Rejected') {
+      return;
+    }
     setSubmitted(true)
+  } catch (error) {
+      console.log('handleSubmit error', error);
+  }
   }
 
   useEffect(() => {
     if (submitted && admin) {
       navigate('/admin-panel')
+    } else if (!submitted && !admin) {
+      dispatch(setError(''))
+      setSubmitted(false)
+      navigate('/login-admin')
     }
   }, [submitted, admin, navigate])
 
