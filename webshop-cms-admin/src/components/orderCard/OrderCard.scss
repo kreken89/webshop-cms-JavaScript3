@@ -8,6 +8,10 @@
   .order-title {
     margin-bottom: 2rem;
   }
+
+  .order-collection {
+
+  }
 }
 // order card styling
 .order_item {
@@ -28,6 +32,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+    .link{
+      text-decoration: none;
+      color: black;
+    }
+
     img {
       width: 60px;
       height: 60px;

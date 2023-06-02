@@ -7,8 +7,18 @@
   .detail_items{
     display: flex;
     flex-direction: row;
-    .left_side-box{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1rem;
 
+    .right_side-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+    } 
+
+    .left_side-box{
+      display: flex;
 
       img{
         width: 400px;
@@ -18,4 +28,13 @@
     }
   }
 
+}
+
+.btn-back {
+  width: 100%;
+  background-color: lightslategray;
+  margin-bottom: 2rem;
+}
+.btn-back:hover{
+  background-color: lightgray;
 }

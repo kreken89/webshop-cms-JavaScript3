@@ -25,6 +25,9 @@ const OrderDetails = () => {
               <img src={item.imageURL} alt={item.name} />
             </div>
             <div className="right_side-box">
+              <Link to={`/orders`}>
+                <button className="btn-back">Back to orders</button>
+              </Link>
               <p>Item Name: {item.name}</p>
               <p>Size: {item.size}</p>
               <p>Item Price: {item.price} kr</p>
@@ -33,9 +36,6 @@ const OrderDetails = () => {
           </div>
         ))}
       </section>
-        <Link to={`/orders`}>
-          <button className="btn-back">Back to orders</button>
-        </Link>
     </div>
   )
 }
