@@ -6,7 +6,7 @@ import {
   setError,
 } from '../../../store/features/auth/authSlice'
 
-import GoogleBtn from '../../../components/googleBtn/GoogleBtn'
+// import GoogleBtn from '../../../components/googleBtn/GoogleBtn'
 
 const LoginAdmin = () => {
   const navigate = useNavigate()
@@ -94,10 +94,10 @@ const LoginAdmin = () => {
           <button type="submit" className="submit-btn">
             Login
           </button>
-          <div className="social_login">
+          {/* <div className="social_login">
             <h3>Login with Google</h3>
             <GoogleBtn setSubmitted={setSubmitted} />
-          </div>
+          </div> */}
           <div className="terms">
             <p>
               You don't have an account? /{' '}
